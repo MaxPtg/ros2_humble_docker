@@ -10,8 +10,13 @@
         </General>      
         <Discovery>
             <Peers>
+<<<<<<< Updated upstream
                 <Peer address="fc94:2c8:df7:dd0a:19db:48c0:8d41:abfb"/>
 		<Peer address="fc94:4d2c:9e9d:2a5e:a3fd:ccfc:9d26:33ac"/>
+=======
+                <Peer address="fc94:fc62:246b:6d04:e94e:3913:bbb0:3ead"/>
+                <Peer address="fc94:c354:924d:2c15:d1f9:4840:18f1:59d8"/>
+>>>>>>> Stashed changes
             </Peers>
             <ParticipantIndex>auto</ParticipantIndex>
         </Discovery>
