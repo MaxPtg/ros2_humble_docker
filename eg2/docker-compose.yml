@@ -7,7 +7,7 @@ services:
             dockerfile: eg2/Dockerfile
         command: ros2 launch my_turtle_bringup only_controller.launch.py
     turtle_sim:
-        image: osrf/ros:foxy-desktop
+        image: osrf/ros:humble-desktop
         environment: 
             - DISPLAY
         volumes: 
