@@ -1,4 +1,4 @@
-FROM osrf/ros:foxy-desktop
+FROM osrf/ros:humble-desktop
 
 SHELL ["/bin/bash", "-c"]
 
@@ -11,12 +11,8 @@ RUN update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 # Install ROS 2 deppendencies (Cyclone DDS)
 RUN sudo apt update && \
     sudo apt install -y \
-    ros-foxy-rmw-cyclonedds-cpp 
+    ros-humble-rmw-cyclonedds-cpp 
 RUN sudo rm -rf /var/lib/apt/lists/*
-
-# Find your JOINCODE at https://app.husarnet.com
-ENV JOINCODE=""
-ENV HOSTNAME=my-container-1
 
 WORKDIR /app
 

@@ -10,7 +10,8 @@
         </General>      
         <Discovery>
             <Peers>
-                <Peer address="fc94:406d:ec8a:01e7:6c06:4898:9d68:c6d0"/>
+                <Peer address="fc94:fc62:246b:6d04:e94e:3913:bbb0:3ead"/>
+                <Peer address="fc94:c354:924d:2c15:d1f9:4840:18f1:59d8"/>
             </Peers>
             <ParticipantIndex>auto</ParticipantIndex>
         </Discovery>
