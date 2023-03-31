@@ -14,7 +14,7 @@ services:
                 export CYCLONEDDS_URI=file:///cyclonedds.xml
                 ros2 run my_demo_pkg color_controller
         network_mode: service:husarnet
-        
+
     move_controller:
         build:
             context: ../../
@@ -40,5 +40,5 @@ services:
             - NET_ADMIN
         devices:
             - /dev/net/tun
-        env_file: 
+        env_file:
             - ./.env  # create .env file in the same folder as Dockerfile and specify HOSTNAME and JOINCODE there

@@ -3,15 +3,9 @@ version: '2.3'
 services:
     turtle_sim:
         image: osrf/ros:humble-desktop-full
-<<<<<<< Updated upstream
         environment:
             - DISPLAY=${DISPLAY}
         volumes:
-=======
-        environment: 
-            - DISPLAY
-        volumes: 
->>>>>>> Stashed changes
             - /tmp/.X11-unix:/tmp/.X11-unix:rw
             - ./cyclonedds.xml:/cyclonedds.xml
         command:
