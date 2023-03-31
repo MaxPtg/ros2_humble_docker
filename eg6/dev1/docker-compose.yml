@@ -1,20 +1,6 @@
 version: '2.3'
 
 services:
-    color_controller:
-        build:
-            context: ../../
-            dockerfile: eg6/dev1/Dockerfile
-        volumes:
-            - ./cyclonedds.xml:/cyclonedds.xml
-        command:
-            - bash
-            - -c
-            - |
-                export CYCLONEDDS_URI=file:///cyclonedds.xml
-                ros2 run my_demo_pkg color_controller
-        network_mode: service:husarnet
-
     move_controller:
         build:
             context: ../../
@@ -27,6 +13,20 @@ services:
             - |
                 export CYCLONEDDS_URI=file:///cyclonedds.xml
                 ros2 run my_demo_pkg move_controller
+        network_mode: service:husarnet
+
+    color_controller:
+        build:
+            context: ../../
+            dockerfile: eg6/dev1/Dockerfile
+        volumes:
+            - ./cyclonedds.xml:/cyclonedds.xml
+        command:
+            - bash
+            - -c
+            - |
+                export CYCLONEDDS_URI=file:///cyclonedds.xml
+                ros2 run my_demo_pkg color_controller
         network_mode: service:husarnet
 
     husarnet:

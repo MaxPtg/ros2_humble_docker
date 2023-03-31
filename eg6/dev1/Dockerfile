@@ -4,7 +4,7 @@ SHELL ["/bin/bash", "-c"]
 
 
 RUN sudo apt update && \
-    sudo apt install -y ros-humble-turtlesim
+    sudo apt install -y ros-humble-turtlesim ros-geometry-msgs
     
 
 WORKDIR /app

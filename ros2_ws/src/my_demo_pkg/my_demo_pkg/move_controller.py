@@ -11,6 +11,8 @@ class MoveControllerNode(Node):
 
         self.cmd_vel_publisher_ = self.create_publisher(
         Twist, "turtle1/cmd_vel", 10)
+        
+        self.get_logger().info("Started publisher...")
 
         self.control_loop_timer_ = self.create_timer(0.01, self.control_loop)
 
