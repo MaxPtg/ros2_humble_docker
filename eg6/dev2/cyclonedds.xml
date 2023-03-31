@@ -10,7 +10,8 @@
         </General>      
         <Discovery>
             <Peers>
-                <Peer address="turtle-controller"/>
+                <Peer address="fc94:2c8:df7:dd0a:19db:48c0:8d41:abfb"/>
+		<Peer address="fc94:4d2c:9e9d:2a5e:a3fd:ccfc:9d26:33ac"/>
             </Peers>
             <ParticipantIndex>auto</ParticipantIndex>
         </Discovery>

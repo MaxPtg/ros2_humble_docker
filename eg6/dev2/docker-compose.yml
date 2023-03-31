@@ -2,13 +2,13 @@ version: '2.3'
 
 services:
     turtle_sim:
-        image: osrf/ros:galactic-desktop
-        environment: 
-            - DISPLAY
-        volumes: 
+        image: osrf/ros:humble-desktop-full
+        environment:
+            - DISPLAY=${DISPLAY}
+        volumes:
             - /tmp/.X11-unix:/tmp/.X11-unix:rw
             - ./cyclonedds.xml:/cyclonedds.xml
-        command: 
+        command:
             - bash
             - -c
             - |
@@ -27,5 +27,5 @@ services:
             - NET_ADMIN
         devices:
             - /dev/net/tun
-        env_file: 
+        env_file:
             - ./.env  # create .env file in the same folder as Dockerfile and specify HOSTNAME and JOINCODE there
