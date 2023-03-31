@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+    <transport_descriptors>
+        <transport_descriptor>
+            <transport_id>HusarnetTransport</transport_id>
+            <type>UDPv6</type>
+        </transport_descriptor>
+    </transport_descriptors>
+
+    <participant profile_name="CustomHusarnetParticipant" is_default_profile="true">
+        <rtps>
+            <userTransports>
+                <transport_id>HusarnetTransport</transport_id>
+            </userTransports>
+            <useBuiltinTransports>true</useBuiltinTransports>
+            <builtin>
+                <initialPeersList>
+                <!-- Repeat this part for each husernet peer -->
+                    <locator>
+                        <udpv6>
+                            <address>fc94:c354:924d:2c15:d1f9:4840:18f1:59d8</address> <!-- or <address>husarnet-hostname</address> -->
+                        </udpv6>
+                    </locator>
+		    <locator>
+                        <udpv6>
+                            <address>fc94:fc62:246b:6d04:e94e:3913:bbb0:3ead</address> <!-- or <address>husarnet-hostname</address> -->
+                        </udpv6>
+                    </locator>
+                <!-- End repeat -->
+                </initialPeersList>
+            </builtin>
+        </rtps>
+    </participant>
+</profiles>
